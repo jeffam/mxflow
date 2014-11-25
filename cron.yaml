@@ -1,0 +1,7 @@
+cron:
+- description: Sends test mails
+  url: /probesend
+  schedule: every 30 minutes
+- description: Checks return mail timeouts
+  url: /probecheck
+  schedule: every 5 minutes

@@ -1,0 +1,25 @@
+application: mx-flow
+version: 1-0-0
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+inbound_services:
+- mail
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /_ah/mail/.+
+  script: probereceive.app
+  login: admin
+
+- url: .*
+  script: main.app
+  login: admin
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
