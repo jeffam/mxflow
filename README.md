@@ -52,3 +52,4 @@ useful Python application, so feel free to set me straight where necessary!
 - Add charts showing round-trip performance over time
 - Save the server configuration in the datastore and allow it to be modified
   without re-deploying the app
+- Consider a switch from cron to the task queue api for testing of failed probes
